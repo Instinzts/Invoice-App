@@ -12,7 +12,7 @@ import {
   import { buttonVariants } from "@/components/ui/button";
   import { SubmitButton } from "@/app/components/SubmitButtons";
   import { MarkAsPaidAction } from "@/app/actions";
-  import prisma from "@/lib/db";
+  import prisma from "@/app/utils/db";
   import { redirect } from "next/navigation";
   import { requiredUser } from "@/app/utils/hooks";
   

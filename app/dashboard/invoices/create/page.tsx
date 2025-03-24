@@ -1,5 +1,5 @@
 import { CreateInvoice } from "@/app/components/CreateInvoice";
-import prisma from "@/lib/db";
+import prisma from "@/app/utils/db";
 import { requiredUser } from "@/app/utils/hooks";
 import { redirect } from "next/navigation";
 

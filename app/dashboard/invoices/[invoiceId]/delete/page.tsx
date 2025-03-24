@@ -1,4 +1,4 @@
-import prisma from "@/lib/db";
+import prisma from "@/app/utils/db";
 import { requiredUser } from "@/app/utils/hooks";
 import {
   Card,
