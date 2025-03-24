@@ -30,7 +30,7 @@ import {
   
     //Group and aggregate data by date
     const aggregatedData = rawData.reduce(
-      (acc: { [key: string]: number }, curr: { createdAt: Date; total: number }) => {
+      (acc: Record<string, number>, curr: { createdAt: Date; total: number }) => {
         const date = new Date(curr.createdAt).toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
@@ -43,7 +43,7 @@ import {
       {}
     );
     //Convert to array and from the object
-    const transformedData = Object.entries(aggregatedData)
+    const transformedData: { date: string; amount: number }[] = Object.entries(aggregatedData)
       .map(([date, amount]) => ({
         date,
         amount,
