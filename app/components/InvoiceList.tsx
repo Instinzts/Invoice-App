@@ -7,7 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { InvoiceActions } from "./InvoiceAction";
-import prisma from "../utils/db";
+import prisma from "../../lib/db";
 import { requiredUser } from "../utils/hooks";
 import { formatCurrency } from "../../app/utils/formatCurrency";
 import { Badge } from "@/components/ui/badge";

@@ -1,4 +1,4 @@
-import prisma from "@/app/utils/db";
+import prisma from "@/lib/db";
 import { NextResponse } from "next/server";
 import jsPDF from "jspdf";
 import { formatCurrency } from "@/app/utils/formatCurrency";

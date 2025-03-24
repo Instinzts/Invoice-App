@@ -3,7 +3,7 @@
 import { requiredUser } from "./utils/hooks";
 import { parseWithZod } from "@conform-to/zod";
 import { invoiceSchema } from "./utils/zodSchemas";
-import prisma from "./utils/db";
+import prisma from "../lib/db";
 import { redirect } from "next/navigation";
 import { formatCurrency } from "./utils/formatCurrency";
 import { emailClient } from "./utils/mailtrap";

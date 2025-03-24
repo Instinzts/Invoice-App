@@ -1,6 +1,4 @@
 // lib/prisma.ts
-// app/utils/db.ts
-"use server";
 
 import  { PrismaClient }  from "@prisma/client";
 

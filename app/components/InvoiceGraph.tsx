@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Graph } from "./Graph";
-import prisma from "../utils/db";
+import prisma from "../../lib/db";
 import { requiredUser } from "../utils/hooks";
 
 async function getInvoices(userId: string) {

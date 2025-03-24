@@ -4,7 +4,7 @@ import { EmptyState } from "../components/EmptyState";
 import { InvoiceGraph } from "../components/InvoiceGraph";
 import { RecentInvoices } from "../components/RecentInvoices";
 import { signOut } from "../utils/auth";
-import prisma from "../utils/db";
+import prisma from "../../lib/db";
 import { requiredUser } from "../utils/hooks";
 import { Skeleton } from "@/components/ui/skeleton";
 
