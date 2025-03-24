@@ -35,20 +35,15 @@ async function getInvoices(userId: string) {
         month: "short",
         day: "numeric",
       });
-
       acc[date] = (acc[date] || 0) + curr.total;
-
       return acc;
     },
     {}
   );
 
-  // Convert aggregated data to array, attach an originalDate for proper sorting,
-  // then map to the expected shape
-  const transformedData: { date: string; amount: number }[] = Object.entries(
-    aggregatedData
-  )
-    .map(([date, amount]: [string, number]) => ({
+  // Assert that Object.entries returns an array of [string, number]
+  const transformedData: { date: string; amount: number }[] = (Object.entries(aggregatedData) as [string, number][])
+    .map(([date, amount]) => ({
       date,
       amount,
       originalDate: new Date(date + ", " + new Date().getFullYear()),
