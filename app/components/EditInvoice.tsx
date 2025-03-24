@@ -27,10 +27,12 @@ import { parseWithZod } from "@conform-to/zod";
 import { invoiceSchema } from "../utils/zodSchemas";
 import { createInvoice, editInvoice } from "../actions";
 import { formatCurrency } from "../utils/formatCurrency";
-import { Prisma } from "@prisma/client";
+import { PrismaClient, Invoice } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 interface iAppProps {
-  data: Prisma.InvoiceGetPayload<{}>;
+  data: Invoice;
 }
 
 export function EditInvoice({ data }: iAppProps) {
