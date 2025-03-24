@@ -30,7 +30,7 @@ import {
   
     //Group and aggregate data by date
     const aggregatedData = rawData.reduce(
-      (acc: { [key: string]: number }, curr) => {
+      (acc: { [key: string]: number }, curr: { createdAt: Date; total: number }) => {
         const date = new Date(curr.createdAt).toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
