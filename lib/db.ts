@@ -1,5 +1,5 @@
 // lib/prisma.ts
-
+"use server";
 import  { PrismaClient }  from "@prisma/client";
 
 const prismaClientSigleton = () => {
